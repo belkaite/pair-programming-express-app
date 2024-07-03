@@ -54,11 +54,4 @@ Step 2: Create controller for tickets.
 Step 3: Create repository for tickets.
 
 
-
-
-
-
-### Administrators role:
-
-**Create New Screenings**:
-  - Task: create screenings endpoint
+(work still in progress)
