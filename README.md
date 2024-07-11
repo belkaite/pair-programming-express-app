@@ -41,16 +41,21 @@ This application allows users to book tickets for movies and administrators to m
 
 #### 1. Screenings:
 
-Step 1: Create a new migration file to add the screenings table. Define the screenings table with the necessary columns. Run the migration to update the database schema.
-Step 2: Create controller for screenings: POST endpoint to create new screenings, GET endpoint to retrieve all available screenings for booking.
-Step 3: Create repository for screenings. Methods needed: creating a new screening, getting all screenings that are not in the past, getting movie ID from the movies table by title and year.
+Step 1: Create a new migration file to add the screenings table. Define the screenings table with the necessary data: screening id, movie id, screening timestamp(s), total tickets allocation.
+Run the migration to update the database schema.
 
+Step 2: Start writing TTD for screenings by writing tests what the entire screening module should do. Start by testing endpoints: GET, POST, PATCH. Along the way use the technique - make it fail, make it work, make it right - by writing tests firsts, then writing the straightforward code just to pass it and then finally refactor it. Meaning that along writing tests create a controller file to write the code for handling endpoints.
 
+Step 3: Similar approach use for writing TTD for repository as in step 2 again starting from tests. Repository file should contain database operations: get all screenings that are not in the past, getting screenings by movie ID, creating and updating screenings.
+
+Step 4: Create schema that ensures user's inputs validation. Again - start from writing tests as in the previous two steps.
 
 #### 2. Tickets:
 
 Step 1: Create a new migration file to add the screenings table.
+
 Step 2: Create controller for tickets.
+
 Step 3: Create repository for tickets.
 
 
