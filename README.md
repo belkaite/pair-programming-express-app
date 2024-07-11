@@ -37,7 +37,7 @@ npm run generate-types
 This application allows users to book tickets for movies and administrators to manage screenings.
 
 ### Tasks:
-**Create 2 new endpoints**:
+**Create 2 new modules**:
 
 #### 1. Screenings:
 
@@ -52,11 +52,30 @@ Step 4: Create schema that ensures user's inputs validation. Again - start from 
 
 #### 2. Tickets:
 
-Step 1: Create a new migration file to add the screenings table.
+Step 1: Create a new migration file to add the tickets table. Define the tickets table with the necessary data: ticket id, user id, screening id.
+ickets.
+Run the migration to update the database schema.
 
-Step 2: Create controller for tickets.
+Step 2: Write TDD tests for the tickets module. Tests for the endpoints: GET, POST. Create a controller file to handle these endpoints and write straightforward code to pass the tests. Refactor as needed.
 
-Step 3: Create repository for tickets.
+Step 3: Write TDD tests for the repository. Tests for database operations: get all bookings for a user, create a booking for a screening. Implement the repository methods to pass the tests, then refactor the code.
+
+Step 4: Write tests to ensure the schema validates user inputs correctly. Implement the schema to pass the tests.
 
 
-(work still in progress)
+**Roles**:
+
+#### Administrators':
+
+Create new viewing screenings for watching a movie.
+
+#### Users':
+
+Get a list of movies with their title and year by providing a list of their IDs.
+Get a list of screenings available for booking.
+Get a list of booking (tickets).
+Create a booking (ticket).
+
+NOTE: For this application permissions and authentication part of the application will be ignored. To limit our scope, we will assume that your endpoints will be reached only by users who have the correct permissions to do so. Therefore, administrators and users do not have any functional differences.
+
+
